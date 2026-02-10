@@ -18,6 +18,7 @@ static void eat(TokenType t) {
 static AST *expr(void);
 static AST *term(void);
 static AST *factor(void);
+static AST *expr_from_node(AST *node);
 
 AST *parse(void) {
     current = get_next_token();
@@ -29,9 +30,40 @@ AST *parse(void) {
             eat(TOK_ASSIGN);
             return new_assign(id.name, expr());
         }
+        // Si no es asignación, volvemos atrás creando el nodo de variable
+        // y continuamos con expr_from_node que procesa el resto
+        AST *left = new_var(id.name);
+        return expr_from_node(left);
     }
 
     return expr();
+}
+
+// Función auxiliar: continúa procesando + - * / desde un nodo existente
+static AST *expr_from_node(AST *node) {
+    // Primero procesa * y / (mayor precedencia)
+    while (current.type == TOK_MUL || current.type == TOK_DIV) {
+        char op = (current.type == TOK_MUL) ? '*' : '/';
+        eat(current.type);
+        node = new_binop(op, node, factor());
+    }
+    
+    // Luego procesa + y - (menor precedencia)
+    while (current.type == TOK_PLUS || current.type == TOK_MINUS) {
+        char op = (current.type == TOK_PLUS) ? '+' : '-';
+        eat(current.type);
+        AST *right = factor();
+        
+        // Procesa * y / en el lado derecho
+        while (current.type == TOK_MUL || current.type == TOK_DIV) {
+            char op2 = (current.type == TOK_MUL) ? '*' : '/';
+            eat(current.type);
+            right = new_binop(op2, right, factor());
+        }
+        
+        node = new_binop(op, node, right);
+    }
+    return node;
 }
 
 static AST *expr(void) {
