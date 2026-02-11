@@ -8,7 +8,7 @@ typedef enum {
     AST_ASSIGN
 } ASTType;
 
-typedef struct AST {
+typedef struct {
     ASTType type;
     double value;
     char name[32];
