@@ -17,6 +17,7 @@ static void eat(TokenType t) {
 
 static AST *expr(void);
 static AST *term(void);
+static AST *power(void);
 static AST *factor(void);
 static AST *expr_from_node(AST *node);
 
@@ -79,12 +80,24 @@ static AST *expr(void) {
 }
 
 static AST *term(void) {
-    AST *node = factor();
+    AST *node = power();
 
     while (current.type == TOK_MUL || current.type == TOK_DIV) {
         char op = (current.type == TOK_MUL) ? '*' : '/';
         eat(current.type);
-        node = new_binop(op, node, factor());
+        node = new_binop(op, node, power());
+    }
+
+    return node;
+}
+
+static AST *power(void) {
+    AST *node = factor();
+
+    if (current.type == TOK_EXP) {
+        eat(TOK_EXP);
+        // Recursión a la derecha para asociatividad derecha: 2^3^2 = 2^(3^2)
+        node = new_binop('^', node, power());
     }
 
     return node;

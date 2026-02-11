@@ -3,6 +3,7 @@
 #include <string.h>
 #include "ast.h"
 #include "symtable.h"
+#include <math.h>
 
 #define MAX_VARS 100
 
@@ -82,6 +83,7 @@ double eval(AST *n) {
                 case '-': return a - b;
                 case '*': return a * b;
                 case '/': return a / b;
+                case '^': return pow(a,b);
             }
         }
     }

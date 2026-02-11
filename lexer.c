@@ -47,6 +47,7 @@ Token get_next_token(void) {
         case '-': tok.type = TOK_MINUS; break;
         case '*': tok.type = TOK_MUL; break;
         case '/': tok.type = TOK_DIV; break;
+        case '^': tok.type = TOK_EXP; break;
         case '=': tok.type = TOK_ASSIGN; break;
         case '(': tok.type = TOK_LPAREN; break;
         case ')': tok.type = TOK_RPAREN; break;

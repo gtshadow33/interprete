@@ -18,7 +18,7 @@ all: $(TARGET)
 
 # Compilar ejecutable a partir de objetos
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) -lm
 
 # Compilar cada archivo .c a .o
 %.o: %.c

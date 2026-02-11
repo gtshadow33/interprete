@@ -9,6 +9,7 @@ typedef enum {
     TOK_MINUS,
     TOK_MUL,
     TOK_DIV,
+    TOK_EXP,
     TOK_LPAREN,
     TOK_RPAREN,
     TOK_EOF
