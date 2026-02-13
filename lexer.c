@@ -24,12 +24,13 @@ Token get_next_token(void) {
         char buf[64];
         int i = 0;
 
-        // Hexadecimal: 0x...
+        // -------- HEXADECIMAL --------
         if (src[pos] == '0' && (src[pos+1] == 'x' || src[pos+1] == 'X')) {
             buf[i++] = src[pos++]; // 0
             buf[i++] = src[pos++]; // x
 
             while (isxdigit(src[pos])) {
+                if (i >= 63) break;
                 buf[i++] = src[pos++];
             }
 
@@ -40,18 +41,42 @@ Token get_next_token(void) {
             return tok;
         }
 
-        // Decimal / flotante / notación científica
-        while (isdigit(src[pos]) || 
-               src[pos] == '.' || 
-               src[pos] == 'e' || 
-               src[pos] == 'E' ||
-               src[pos] == '+' || 
-               src[pos] == '-') {
+        // -------- DECIMAL / FLOTANTE / NOTACIÓN CIENTÍFICA --------
 
-            buf[i++] = src[pos++];
-            
-            // evitar overflow del buffer
+        // Parte entera
+        while (isdigit(src[pos])) {
             if (i >= 63) break;
+            buf[i++] = src[pos++];
+        }
+
+        // Parte decimal
+        if (src[pos] == '.') {
+            if (i < 63) buf[i++] = src[pos++];
+            
+            while (isdigit(src[pos])) {
+                if (i >= 63) break;
+                buf[i++] = src[pos++];
+            }
+        }
+
+        // Parte exponencial
+        if (src[pos] == 'e' || src[pos] == 'E') {
+            if (i < 63) buf[i++] = src[pos++];
+
+            // signo opcional SOLO después de e
+            if (src[pos] == '+' || src[pos] == '-') {
+                if (i < 63) buf[i++] = src[pos++];
+            }
+
+            // Debe haber al menos un dígito en el exponente
+            if (!isdigit(src[pos])) {
+                printf("Error: exponente inválido\n");
+            }
+
+            while (isdigit(src[pos])) {
+                if (i >= 63) break;
+                buf[i++] = src[pos++];
+            }
         }
 
         buf[i] = '\0';
@@ -66,8 +91,8 @@ Token get_next_token(void) {
         int i = 0;
 
         while (isalnum(src[pos])) {
-            tok.name[i++] = src[pos++];
             if (i >= 63) break;
+            tok.name[i++] = src[pos++];
         }
 
         tok.name[i] = '\0';
