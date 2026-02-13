@@ -15,7 +15,7 @@ static Token current;
  */
 static void eat(TokenType t) {
     if (current.type == t)
-        current = get_next_token();  // Avanza al siguiente token
+        current = get_next_token();
     else {
         printf("Error de sintaxis\n");
         exit(1);
@@ -27,7 +27,6 @@ static AST *expr(void);
 static AST *term(void);
 static AST *power(void);
 static AST *factor(void);
-static AST *expr_from_node(AST *node);
 
 /*
  * parse()
@@ -35,69 +34,52 @@ static AST *expr_from_node(AST *node);
  * Devuelve el AST completo de la expresión.
  */
 AST *parse(void) {
-    current = get_next_token();  // Obtiene el primer token
+    current = get_next_token();  // Primer token
 
-    // Si empieza con identificador puede ser asignación
+    // Verifica si es asignación: ID = expr
     if (current.type == TOK_ID) {
         Token id = current;
-        current = get_next_token();
+        eat(TOK_ID);
 
-        // Caso: x = algo
         if (current.type == TOK_ASSIGN) {
             eat(TOK_ASSIGN);
             return new_assign(id.name, expr());
         }
 
-        // Caso: empieza con variable pero no es asignación
-        AST *left = new_var(id.name);
-        return expr_from_node(left);
-    }
+        // Si no es asignación, reconstruimos como expresión normal
+        // Simulamos que el ID es un factor ya leído
+        AST *node = new_var(id.name);
 
-    // Si no es ID, procesamos como expresión normal
-    return expr();
-}
-
-/*
- * expr_from_node()
- * Continúa procesando operadores cuando ya tenemos
- * un nodo inicial (ej: variable).
- */
-static AST *expr_from_node(AST *node) {
-
-    // Primero procesa * y /
-    while (current.type == TOK_MUL || current.type == TOK_DIV) {
-        char op = (current.type == TOK_MUL) ? '*' : '/';
-        eat(current.type);
-        node = new_binop(op, node, factor());
-    }
-    
-    // Luego procesa + y -
-    while (current.type == TOK_PLUS || current.type == TOK_MINUS) {
-        char op = (current.type == TOK_PLUS) ? '+' : '-';
-        eat(current.type);
-
-        AST *right = factor();
-
-        // Maneja multiplicación o división del lado derecho
-        while (current.type == TOK_MUL || current.type == TOK_DIV) {
-            char op2 = (current.type == TOK_MUL) ? '*' : '/';
-            eat(current.type);
-            right = new_binop(op2, right, factor());
+        // Continuamos procesando con la jerarquía normal
+        while (current.type == TOK_EXP) {
+            eat(TOK_EXP);
+            node = new_binop('^', node, power());
         }
-        
-        node = new_binop(op, node, right);
+
+        while (current.type == TOK_MUL || current.type == TOK_DIV) {
+            char op = (current.type == TOK_MUL) ? '*' : '/';
+            eat(current.type);
+            node = new_binop(op, node, power());
+        }
+
+        while (current.type == TOK_PLUS || current.type == TOK_MINUS) {
+            char op = (current.type == TOK_PLUS) ? '+' : '-';
+            eat(current.type);
+            node = new_binop(op, node, term());
+        }
+
+        return node;
     }
 
-    return node;
+    return expr();
 }
 
 /*
  * expr()
  * Maneja suma y resta.
- * Nivel más bajo de precedencia.
  */
 static AST *expr(void) {
-    AST *node = term();  // Primero procesa * y /
+    AST *node = term();
 
     while (current.type == TOK_PLUS || current.type == TOK_MINUS) {
         char op = (current.type == TOK_PLUS) ? '+' : '-';
@@ -113,7 +95,7 @@ static AST *expr(void) {
  * Maneja multiplicación y división.
  */
 static AST *term(void) {
-    AST *node = power();  // Primero procesa potencia
+    AST *node = power();
 
     while (current.type == TOK_MUL || current.type == TOK_DIV) {
         char op = (current.type == TOK_MUL) ? '*' : '/';
