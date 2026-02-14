@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/interprete.dir/link.d CMakeFiles/interprete.dir/eval.c.o CMakeFiles/interprete.dir/lexer.c.o CMakeFiles/interprete.dir/main.c.o CMakeFiles/interprete.dir/parser.c.o -o interprete  -lm

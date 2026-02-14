@@ -1,0 +1,3 @@
+/home/gts/porogramacion/c/interprete/build/CMakeFiles/interprete.dir
+/home/gts/porogramacion/c/interprete/build/CMakeFiles/edit_cache.dir
+/home/gts/porogramacion/c/interprete/build/CMakeFiles/rebuild_cache.dir
