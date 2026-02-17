@@ -72,76 +72,76 @@ include CMakeFiles/interprete.dir/flags.make
 CMakeFiles/interprete.dir/codegen:
 .PHONY : CMakeFiles/interprete.dir/codegen
 
-CMakeFiles/interprete.dir/eval.c.o: CMakeFiles/interprete.dir/flags.make
-CMakeFiles/interprete.dir/eval.c.o: /home/gts/porogramacion/c/interprete/eval.c
-CMakeFiles/interprete.dir/eval.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/interprete.dir/eval.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/eval.c.o -MF CMakeFiles/interprete.dir/eval.c.o.d -o CMakeFiles/interprete.dir/eval.c.o -c /home/gts/porogramacion/c/interprete/eval.c
+CMakeFiles/interprete.dir/src/eval/eval.c.o: CMakeFiles/interprete.dir/flags.make
+CMakeFiles/interprete.dir/src/eval/eval.c.o: /home/gts/porogramacion/c/interprete/src/eval/eval.c
+CMakeFiles/interprete.dir/src/eval/eval.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/interprete.dir/src/eval/eval.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/src/eval/eval.c.o -MF CMakeFiles/interprete.dir/src/eval/eval.c.o.d -o CMakeFiles/interprete.dir/src/eval/eval.c.o -c /home/gts/porogramacion/c/interprete/src/eval/eval.c
 
-CMakeFiles/interprete.dir/eval.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/eval.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/eval.c > CMakeFiles/interprete.dir/eval.c.i
+CMakeFiles/interprete.dir/src/eval/eval.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/src/eval/eval.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/src/eval/eval.c > CMakeFiles/interprete.dir/src/eval/eval.c.i
 
-CMakeFiles/interprete.dir/eval.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/eval.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/eval.c -o CMakeFiles/interprete.dir/eval.c.s
+CMakeFiles/interprete.dir/src/eval/eval.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/src/eval/eval.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/src/eval/eval.c -o CMakeFiles/interprete.dir/src/eval/eval.c.s
 
-CMakeFiles/interprete.dir/lexer.c.o: CMakeFiles/interprete.dir/flags.make
-CMakeFiles/interprete.dir/lexer.c.o: /home/gts/porogramacion/c/interprete/lexer.c
-CMakeFiles/interprete.dir/lexer.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/interprete.dir/lexer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/lexer.c.o -MF CMakeFiles/interprete.dir/lexer.c.o.d -o CMakeFiles/interprete.dir/lexer.c.o -c /home/gts/porogramacion/c/interprete/lexer.c
+CMakeFiles/interprete.dir/src/lexer/lexer.c.o: CMakeFiles/interprete.dir/flags.make
+CMakeFiles/interprete.dir/src/lexer/lexer.c.o: /home/gts/porogramacion/c/interprete/src/lexer/lexer.c
+CMakeFiles/interprete.dir/src/lexer/lexer.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/interprete.dir/src/lexer/lexer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/src/lexer/lexer.c.o -MF CMakeFiles/interprete.dir/src/lexer/lexer.c.o.d -o CMakeFiles/interprete.dir/src/lexer/lexer.c.o -c /home/gts/porogramacion/c/interprete/src/lexer/lexer.c
 
-CMakeFiles/interprete.dir/lexer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/lexer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/lexer.c > CMakeFiles/interprete.dir/lexer.c.i
+CMakeFiles/interprete.dir/src/lexer/lexer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/src/lexer/lexer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/src/lexer/lexer.c > CMakeFiles/interprete.dir/src/lexer/lexer.c.i
 
-CMakeFiles/interprete.dir/lexer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/lexer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/lexer.c -o CMakeFiles/interprete.dir/lexer.c.s
+CMakeFiles/interprete.dir/src/lexer/lexer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/src/lexer/lexer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/src/lexer/lexer.c -o CMakeFiles/interprete.dir/src/lexer/lexer.c.s
 
-CMakeFiles/interprete.dir/main.c.o: CMakeFiles/interprete.dir/flags.make
-CMakeFiles/interprete.dir/main.c.o: /home/gts/porogramacion/c/interprete/main.c
-CMakeFiles/interprete.dir/main.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interprete.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/main.c.o -MF CMakeFiles/interprete.dir/main.c.o.d -o CMakeFiles/interprete.dir/main.c.o -c /home/gts/porogramacion/c/interprete/main.c
+CMakeFiles/interprete.dir/src/main.c.o: CMakeFiles/interprete.dir/flags.make
+CMakeFiles/interprete.dir/src/main.c.o: /home/gts/porogramacion/c/interprete/src/main.c
+CMakeFiles/interprete.dir/src/main.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interprete.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/src/main.c.o -MF CMakeFiles/interprete.dir/src/main.c.o.d -o CMakeFiles/interprete.dir/src/main.c.o -c /home/gts/porogramacion/c/interprete/src/main.c
 
-CMakeFiles/interprete.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/main.c > CMakeFiles/interprete.dir/main.c.i
+CMakeFiles/interprete.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/src/main.c > CMakeFiles/interprete.dir/src/main.c.i
 
-CMakeFiles/interprete.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/main.c -o CMakeFiles/interprete.dir/main.c.s
+CMakeFiles/interprete.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/src/main.c -o CMakeFiles/interprete.dir/src/main.c.s
 
-CMakeFiles/interprete.dir/parser.c.o: CMakeFiles/interprete.dir/flags.make
-CMakeFiles/interprete.dir/parser.c.o: /home/gts/porogramacion/c/interprete/parser.c
-CMakeFiles/interprete.dir/parser.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interprete.dir/parser.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/parser.c.o -MF CMakeFiles/interprete.dir/parser.c.o.d -o CMakeFiles/interprete.dir/parser.c.o -c /home/gts/porogramacion/c/interprete/parser.c
+CMakeFiles/interprete.dir/src/parser/parser.c.o: CMakeFiles/interprete.dir/flags.make
+CMakeFiles/interprete.dir/src/parser/parser.c.o: /home/gts/porogramacion/c/interprete/src/parser/parser.c
+CMakeFiles/interprete.dir/src/parser/parser.c.o: CMakeFiles/interprete.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gts/porogramacion/c/interprete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interprete.dir/src/parser/parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interprete.dir/src/parser/parser.c.o -MF CMakeFiles/interprete.dir/src/parser/parser.c.o.d -o CMakeFiles/interprete.dir/src/parser/parser.c.o -c /home/gts/porogramacion/c/interprete/src/parser/parser.c
 
-CMakeFiles/interprete.dir/parser.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/parser.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/parser.c > CMakeFiles/interprete.dir/parser.c.i
+CMakeFiles/interprete.dir/src/parser/parser.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/interprete.dir/src/parser/parser.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gts/porogramacion/c/interprete/src/parser/parser.c > CMakeFiles/interprete.dir/src/parser/parser.c.i
 
-CMakeFiles/interprete.dir/parser.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/parser.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/parser.c -o CMakeFiles/interprete.dir/parser.c.s
+CMakeFiles/interprete.dir/src/parser/parser.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/interprete.dir/src/parser/parser.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gts/porogramacion/c/interprete/src/parser/parser.c -o CMakeFiles/interprete.dir/src/parser/parser.c.s
 
 # Object files for target interprete
 interprete_OBJECTS = \
-"CMakeFiles/interprete.dir/eval.c.o" \
-"CMakeFiles/interprete.dir/lexer.c.o" \
-"CMakeFiles/interprete.dir/main.c.o" \
-"CMakeFiles/interprete.dir/parser.c.o"
+"CMakeFiles/interprete.dir/src/eval/eval.c.o" \
+"CMakeFiles/interprete.dir/src/lexer/lexer.c.o" \
+"CMakeFiles/interprete.dir/src/main.c.o" \
+"CMakeFiles/interprete.dir/src/parser/parser.c.o"
 
 # External object files for target interprete
 interprete_EXTERNAL_OBJECTS =
 
-interprete: CMakeFiles/interprete.dir/eval.c.o
-interprete: CMakeFiles/interprete.dir/lexer.c.o
-interprete: CMakeFiles/interprete.dir/main.c.o
-interprete: CMakeFiles/interprete.dir/parser.c.o
+interprete: CMakeFiles/interprete.dir/src/eval/eval.c.o
+interprete: CMakeFiles/interprete.dir/src/lexer/lexer.c.o
+interprete: CMakeFiles/interprete.dir/src/main.c.o
+interprete: CMakeFiles/interprete.dir/src/parser/parser.c.o
 interprete: CMakeFiles/interprete.dir/build.make
 interprete: CMakeFiles/interprete.dir/compiler_depend.ts
 interprete: CMakeFiles/interprete.dir/link.txt

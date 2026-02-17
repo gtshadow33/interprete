@@ -129,101 +129,101 @@ interprete/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/build
 .PHONY : interprete/fast
 
-eval.o: eval.c.o
-.PHONY : eval.o
+src/eval/eval.o: src/eval/eval.c.o
+.PHONY : src/eval/eval.o
 
 # target to build an object file
-eval.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/eval.c.o
-.PHONY : eval.c.o
+src/eval/eval.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/eval/eval.c.o
+.PHONY : src/eval/eval.c.o
 
-eval.i: eval.c.i
-.PHONY : eval.i
+src/eval/eval.i: src/eval/eval.c.i
+.PHONY : src/eval/eval.i
 
 # target to preprocess a source file
-eval.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/eval.c.i
-.PHONY : eval.c.i
+src/eval/eval.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/eval/eval.c.i
+.PHONY : src/eval/eval.c.i
 
-eval.s: eval.c.s
-.PHONY : eval.s
+src/eval/eval.s: src/eval/eval.c.s
+.PHONY : src/eval/eval.s
 
 # target to generate assembly for a file
-eval.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/eval.c.s
-.PHONY : eval.c.s
+src/eval/eval.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/eval/eval.c.s
+.PHONY : src/eval/eval.c.s
 
-lexer.o: lexer.c.o
-.PHONY : lexer.o
+src/lexer/lexer.o: src/lexer/lexer.c.o
+.PHONY : src/lexer/lexer.o
 
 # target to build an object file
-lexer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/lexer.c.o
-.PHONY : lexer.c.o
+src/lexer/lexer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/lexer/lexer.c.o
+.PHONY : src/lexer/lexer.c.o
 
-lexer.i: lexer.c.i
-.PHONY : lexer.i
+src/lexer/lexer.i: src/lexer/lexer.c.i
+.PHONY : src/lexer/lexer.i
 
 # target to preprocess a source file
-lexer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/lexer.c.i
-.PHONY : lexer.c.i
+src/lexer/lexer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/lexer/lexer.c.i
+.PHONY : src/lexer/lexer.c.i
 
-lexer.s: lexer.c.s
-.PHONY : lexer.s
+src/lexer/lexer.s: src/lexer/lexer.c.s
+.PHONY : src/lexer/lexer.s
 
 # target to generate assembly for a file
-lexer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/lexer.c.s
-.PHONY : lexer.c.s
+src/lexer/lexer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/lexer/lexer.c.s
+.PHONY : src/lexer/lexer.c.s
 
-main.o: main.c.o
-.PHONY : main.o
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/main.c.o
-.PHONY : main.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+src/main.i: src/main.c.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/main.c.i
-.PHONY : main.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/main.s: src/main.c.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/main.c.s
-.PHONY : main.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-parser.o: parser.c.o
-.PHONY : parser.o
+src/parser/parser.o: src/parser/parser.c.o
+.PHONY : src/parser/parser.o
 
 # target to build an object file
-parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/parser.c.o
-.PHONY : parser.c.o
+src/parser/parser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/parser/parser.c.o
+.PHONY : src/parser/parser.c.o
 
-parser.i: parser.c.i
-.PHONY : parser.i
+src/parser/parser.i: src/parser/parser.c.i
+.PHONY : src/parser/parser.i
 
 # target to preprocess a source file
-parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/parser.c.i
-.PHONY : parser.c.i
+src/parser/parser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/parser/parser.c.i
+.PHONY : src/parser/parser.c.i
 
-parser.s: parser.c.s
-.PHONY : parser.s
+src/parser/parser.s: src/parser/parser.c.s
+.PHONY : src/parser/parser.s
 
 # target to generate assembly for a file
-parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/parser.c.s
-.PHONY : parser.c.s
+src/parser/parser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interprete.dir/build.make CMakeFiles/interprete.dir/src/parser/parser.c.s
+.PHONY : src/parser/parser.c.s
 
 # Help Target
 help:
@@ -234,18 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... interprete"
-	@echo "... eval.o"
-	@echo "... eval.i"
-	@echo "... eval.s"
-	@echo "... lexer.o"
-	@echo "... lexer.i"
-	@echo "... lexer.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... parser.o"
-	@echo "... parser.i"
-	@echo "... parser.s"
+	@echo "... src/eval/eval.o"
+	@echo "... src/eval/eval.i"
+	@echo "... src/eval/eval.s"
+	@echo "... src/lexer/lexer.o"
+	@echo "... src/lexer/lexer.i"
+	@echo "... src/lexer/lexer.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/parser/parser.o"
+	@echo "... src/parser/parser.i"
+	@echo "... src/parser/parser.s"
 .PHONY : help
 
 

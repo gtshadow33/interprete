@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "parser.h"
-#include "lexer.h"
-#include "token.h"
+#include "../lexer/lexer.h"
+#include "../token.h"
 
 // Token actual que estamos analizando
 static Token current;

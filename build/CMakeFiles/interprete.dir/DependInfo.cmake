@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gts/porogramacion/c/interprete/eval.c" "CMakeFiles/interprete.dir/eval.c.o" "gcc" "CMakeFiles/interprete.dir/eval.c.o.d"
-  "/home/gts/porogramacion/c/interprete/lexer.c" "CMakeFiles/interprete.dir/lexer.c.o" "gcc" "CMakeFiles/interprete.dir/lexer.c.o.d"
-  "/home/gts/porogramacion/c/interprete/main.c" "CMakeFiles/interprete.dir/main.c.o" "gcc" "CMakeFiles/interprete.dir/main.c.o.d"
-  "/home/gts/porogramacion/c/interprete/parser.c" "CMakeFiles/interprete.dir/parser.c.o" "gcc" "CMakeFiles/interprete.dir/parser.c.o.d"
+  "/home/gts/porogramacion/c/interprete/src/eval/eval.c" "CMakeFiles/interprete.dir/src/eval/eval.c.o" "gcc" "CMakeFiles/interprete.dir/src/eval/eval.c.o.d"
+  "/home/gts/porogramacion/c/interprete/src/lexer/lexer.c" "CMakeFiles/interprete.dir/src/lexer/lexer.c.o" "gcc" "CMakeFiles/interprete.dir/src/lexer/lexer.c.o.d"
+  "/home/gts/porogramacion/c/interprete/src/main.c" "CMakeFiles/interprete.dir/src/main.c.o" "gcc" "CMakeFiles/interprete.dir/src/main.c.o.d"
+  "/home/gts/porogramacion/c/interprete/src/parser/parser.c" "CMakeFiles/interprete.dir/src/parser/parser.c.o" "gcc" "CMakeFiles/interprete.dir/src/parser/parser.c.o.d"
   "" "interprete" "gcc" "CMakeFiles/interprete.dir/link.d"
   )
 

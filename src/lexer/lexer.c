@@ -40,6 +40,24 @@ Token get_next_token(void) {
             tok.value = (double)strtol(buf, NULL, 0);
             return tok;
         }
+        // -------- BINARIO --------
+        if (src[pos] == '0' && (src[pos+1] == 'b' || src[pos+1] == 'B')) {
+            buf[i++] = src[pos++]; // 0
+            buf[i++] = src[pos++]; // b
+
+            while (src[pos] == '0' || src[pos] == '1') {
+                if (i >= 63) break;
+                buf[i++] = src[pos++];
+            }
+
+            buf[i] = '\0';
+
+            // strtol NO acepta 0b, así que usamos base 2 manual
+            tok.type = TOK_NUM;
+            tok.value = (double)strtol(buf + 2, NULL, 2);
+            return tok;
+        }
+
 
         // -------- DECIMAL / FLOTANTE / NOTACIÓN CIENTÍFICA --------
 
